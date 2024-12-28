@@ -20,7 +20,7 @@ This project aims to build an intelligent chatbot that can answer user queries a
 
 ## 🔧 **Tech Stack**
 This project will use the following technologies:
-- **AWS**: S3, OpenSearch, Lambda, SageMaker, and CloudFront.
+- **AWS**: S3, OpenSearch, Lambda, SageMaker, Textract, API Gateway, and Amplify.
 - **Vector Database**: Amazon OpenSearch for semantic search.
 - **NLP Models**:
   - Hugging Face (`all-mpnet-base-v2`) for embedding generation.
@@ -31,12 +31,69 @@ This project will use the following technologies:
 ---
 
 ## 🗂️ **Project Roadmap**
-1. **Data Collection**: Scrape and preprocess FAQs and guides from DocuSign's official support website.
-2. **Embedding Generation**: Use Hugging Face transformers to create vector representations of the collected data.
-3. **Document Retrieval**: Implement a semantic search engine using Amazon OpenSearch.
-4. **Response Generation**: Integrate OpenAI GPT-3.5 or GPT-Neo to refine and generate user-friendly answers.
-5. **Frontend Development**: Build a chatbot interface using Streamlit.
-6. **Deployment**: Deploy the complete application using AWS services.
+1. **Define the Scope and Architecture**
+   - Objective: Build a chatbot to assist with DocuSign CLM (Contract Lifecycle Management) queries using RAG.
+   - Architecture Overview: User query → LLM (with RAG) → Document Retrieval → Answer Generation.
+   - Tech Stack Highlights: AWS services, open-source tools, and integration with free LLM APIs.
+
+2. **Data Preparation**
+   - Source: Gather DocuSign CLM documentation, FAQs, and relevant PDFs for indexing.
+   - Tools:
+     - Amazon S3: Store documents (free tier up to 5GB).
+     - Amazon Textract: Extract text from PDFs (limited free-tier usage).
+     - AWS Lambda: Automate text extraction and preprocessing.
+
+3. **Retrieval System**
+   - Objective: Set up a search index to retrieve relevant documents in real time.
+   - Tools:
+     - OpenSearch Service (AWS): Create a search index for document retrieval (free tier available with limited usage).
+     - Alternative (if needed): Use Weaviate (open-source) or Pinecone (free tier).
+
+4. **LLM Integration**
+   - LLM Options:
+     - OpenAI GPT (Free API Access): Use OpenAI’s API with the free-tier credits.
+     - Hugging Face Transformers (AWS SageMaker): Fine-tune an open-source model like GPT-2 or Llama 2.
+   - Deployment on AWS:
+     - AWS SageMaker: Host your fine-tuned LLM model (free-tier instance).
+
+5. **Retrieval-Augmented Generation (RAG) Pipeline**
+   - How to Implement:
+     - Use a framework like LangChain to combine retrieval and LLM seamlessly.
+     - Query documents from OpenSearch, pass results to the LLM, and generate responses.
+   - Compute Resources:
+     - AWS Lambda: Process RAG requests.
+     - AWS API Gateway: Set up API endpoints for chatbot queries (free tier).
+
+6. **Chatbot Frontend**
+   - Objective: Create a simple and user-friendly interface.
+   - Tools:
+     - Streamlit (Open Source): Build a lightweight web app for interaction.
+     - AWS Amplify: Host the chatbot frontend (free-tier resources for hosting).
+
+7. **Testing and Deployment**
+   - Testing:
+     - Test the pipeline locally and with real-world DocuSign CLM queries.
+     - Optimize retrieval accuracy and response quality.
+   - Deployment:
+     - Deploy the full pipeline on AWS using Elastic Beanstalk or AWS Fargate (both offer free-tier usage).
+
+8. **Documentation and GitHub Repository**
+   - Repository Structure:
+     - README.md: Include project overview, technologies used, installation steps, and usage instructions.
+     - Folders:
+       - /data: Sample DocuSign documentation.
+       - /scripts: Preprocessing, retrieval, and LLM scripts.
+       - /frontend: Streamlit or Amplify code.
+   - Highlight Key Features:
+     - Explain the RAG approach, AWS integration, and chatbot functionality.
+     - Include diagrams for architecture and workflow.
+
+9. **Resume Presentation**
+   - Project Title: "DocuSign CLM Support Chatbot using RAG and AWS"
+   - Description:
+     - Developed a Retrieval-Augmented Generation chatbot for DocuSign CLM using AWS services (S3, SageMaker, Textract, OpenSearch).
+     - Integrated with LLMs for real-time and accurate support responses.
+     - Hosted the chatbot using AWS Amplify, leveraging free-tier resources for cost efficiency.
 
 ---
 
@@ -70,4 +127,4 @@ Feel free to reach out for questions, suggestions, or collaboration opportunitie
 
 - **LinkedIn**:  
   - [Gaurav B. R](https://www.linkedin.com/in/gaurav-b-r/)  
-  - [Punya B. R](https://www.linkedin.com/in/punya-b-r-30a31b2a5/)  
+  - [Punya B. R](https://www.linkedin.com/in/punya-b-r-30a31b2a5/)
