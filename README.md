@@ -60,9 +60,14 @@ Updates will be posted here as the project progresses. Follow the repository to 
 
 ---
 
-### 📬 **Contact**
+### 📬 Contact
+
 Feel free to reach out for questions, suggestions, or collaboration opportunities:
-- **Email**: gauravhsn8@gmail.com, punyabr.hsn@gmail.com
-- **LinkedIn**:
-- https://www.linkedin.com/in/gaurav-b-r/
-- https://www.linkedin.com/in/punya-b-r-30a31b2a5/
+
+- **Email**:  
+  - gauravhsn8@gmail.com  
+  - punyabr.hsn@gmail.com  
+
+- **LinkedIn**:  
+  - [Gaurav B. R](https://www.linkedin.com/in/gaurav-b-r/)  
+  - [Punya B. R](https://www.linkedin.com/in/punya-b-r-30a31b2a5/)  
