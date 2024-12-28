@@ -62,5 +62,5 @@ Updates will be posted here as the project progresses. Follow the repository to 
 
 ### 📬 **Contact**
 Feel free to reach out for questions, suggestions, or collaboration opportunities:
-- **Email**: imgauravbr@gmail.com
+- **Email**: imgauravbr@gmailcom
 - **LinkedIn**: https://www.linkedin.com/in/gaurav-b-r/
