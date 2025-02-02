@@ -77,24 +77,6 @@ This project will use the following technologies:
    - Deployment:
      - Deploy the full pipeline on AWS using Elastic Beanstalk or AWS Fargate (both offer free-tier usage).
 
-8. **Documentation and GitHub Repository**
-   - Repository Structure:
-     - README.md: Include project overview, technologies used, installation steps, and usage instructions.
-     - Folders:
-       - /data: Sample DocuSign documentation.
-       - /scripts: Preprocessing, retrieval, and LLM scripts.
-       - /frontend: Streamlit or Amplify code.
-   - Highlight Key Features:
-     - Explain the RAG approach, AWS integration, and chatbot functionality.
-     - Include diagrams for architecture and workflow.
-
-9. **Resume Presentation**
-   - Project Title: "DocuSign CLM Support Chatbot using RAG and AWS"
-   - Description:
-     - Developed a Retrieval-Augmented Generation chatbot for DocuSign CLM using AWS services (S3, SageMaker, Textract, OpenSearch).
-     - Integrated with LLMs for real-time and accurate support responses.
-     - Hosted the chatbot using AWS Amplify, leveraging free-tier resources for cost efficiency.
-
 ---
 
 ## 📅 **Current Status**
@@ -122,8 +104,8 @@ Updates will be posted here as the project progresses. Follow the repository to 
 Feel free to reach out for questions, suggestions, or collaboration opportunities:
 
 - **Email**:  
-  - gauravhsn8@gmail.com  
-  - punyabr.hsn@gmail.com  
+  - gauravhsn8@gmail.com  (Lead Developer)
+  - punyabr.hsn@gmail.com  (Developer)
 
 - **LinkedIn**:  
   - [Gaurav B. R](https://www.linkedin.com/in/gaurav-b-r/)  
